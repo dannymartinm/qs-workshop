@@ -1,0 +1,60 @@
+ _            _             _   
+| |_ __ _ ___| | _____ __ _| |_ 
+| __/ _` / __| |/ / __/ _` | __|
+| || (_| \__ \   < (_| (_| | |_ 
+ \__\__,_|___/_|\_\___\__,_|\__|
+                                
+
+
+version 0.9.20
+[0;30;43m[WARN   ][0m : ---
+[0;30;43m[WARN   ][0m : Linting detected issues in: /home/ec2-user/environment/qs-workshop/submodules/quickstart-aws-vpc/templates/aws-vpc.template
+[0;30;43m[WARN   ][0m :     line 172 [2001] [Check if Parameters are Used] Parameter KeyPairName not used.
+[0;30;43m[WARN   ][0m :     line 177 [2001] [Check if Parameters are Used] Parameter NATInstanceType not used.
+[0;30;43m[WARN   ][0m :     line 420 [8001] [Check if Conditions are Used] Condition GovCloudCondition not used
+[0;30;43m[WARN   ][0m : ---
+[0;30;43m[WARN   ][0m : Linting detected issues in: /home/ec2-user/environment/qs-workshop/templates/workload.template.yaml
+[0;30;43m[WARN   ][0m :     line 71 [2001] [Check if Parameters are Used] Parameter PrivateSubnet1ID not used.
+[0;30;43m[WARN   ][0m :     line 74 [2001] [Check if Parameters are Used] Parameter PrivateSubnet2ID not used.
+[0;30;43m[WARN   ][0m :     line 86 [2001] [Check if Parameters are Used] Parameter VPCCIDR not used.
+[0;30;41m[ERROR  ][0m : ---
+[0;30;41m[ERROR  ][0m : Linting detected issues in: /home/ec2-user/environment/qs-workshop/templates/master.template.yaml
+[0;30;41m[ERROR  ][0m :     line 98 [3006] [Resources have appropriate names] Resource AWS::CloudFormation::Stack  VPCStack has invalid name.  Name has
+                                                        to be alphanumeric.
+[0;30;41m[ERROR  ][0m :     line 118 [3005] [Check DependsOn values for Resources] DependsOn should reference other resources at
+                                                             Resources/WorkloadStack/DependsOn
+[0;30;43m[WARN   ][0m :     line 118 [3005] [Check obsolete DependsOn configuration for Resources] Obsolete DependsOn on resource (VPCStack),
+                                                                             dependency already enforced by a "Fn:GetAtt" at Reso
+                                                                             urces/WorkloadStack/Properties/Parameters/PrivateSub
+                                                                             net1ID/Fn::GetAtt
+[0;30;43m[WARN   ][0m :     line 118 [3005] [Check obsolete DependsOn configuration for Resources] Obsolete DependsOn on resource (VPCStack),
+                                                                             dependency already enforced by a "Fn:GetAtt" at Reso
+                                                                             urces/WorkloadStack/Properties/Parameters/PrivateSub
+                                                                             net2ID/Fn::GetAtt
+[0;30;43m[WARN   ][0m :     line 118 [3005] [Check obsolete DependsOn configuration for Resources] Obsolete DependsOn on resource (VPCStack),
+                                                                             dependency already enforced by a "Fn:GetAtt" at Reso
+                                                                             urces/WorkloadStack/Properties/Parameters/PublicSubn
+                                                                             et1ID/Fn::GetAtt
+[0;30;43m[WARN   ][0m :     line 118 [3005] [Check obsolete DependsOn configuration for Resources] Obsolete DependsOn on resource (VPCStack),
+                                                                             dependency already enforced by a "Fn:GetAtt" at Reso
+                                                                             urces/WorkloadStack/Properties/Parameters/PublicSubn
+                                                                             et2ID/Fn::GetAtt
+[0;30;43m[WARN   ][0m :     line 118 [3005] [Check obsolete DependsOn configuration for Resources] Obsolete DependsOn on resource (VPCStack),
+                                                                             dependency already enforced by a "Fn:GetAtt" at Reso
+                                                                             urces/WorkloadStack/Properties/Parameters/VPCID/Fn::
+                                                                             GetAtt
+[0;30;43m[WARN   ][0m :     line 118 [3005] [Check obsolete DependsOn configuration for Resources] Obsolete DependsOn on resource (VPCStack),
+                                                                             dependency already enforced by a "Fn:GetAtt" at Reso
+                                                                             urces/WorkloadStack/Properties/Parameters/VPCCIDR/Fn
+                                                                             ::GetAtt
+[0;30;41m[ERROR  ][0m :     line 134 [1010] [GetAtt validation of parameters] Invalid GetAtt VPCStack.Outputs.PrivateSubnet1AID for resource
+                                                        WorkloadStack
+[0;30;41m[ERROR  ][0m :     line 138 [1010] [GetAtt validation of parameters] Invalid GetAtt VPCStack.Outputs.PrivateSubnet2AID for resource
+                                                        WorkloadStack
+[0;30;41m[ERROR  ][0m :     line 142 [1010] [GetAtt validation of parameters] Invalid GetAtt VPCStack.Outputs.PublicSubnet1ID for resource
+                                                        WorkloadStack
+[0;30;41m[ERROR  ][0m :     line 146 [1010] [GetAtt validation of parameters] Invalid GetAtt VPCStack.Outputs.PublicSubnet2ID for resource
+                                                        WorkloadStack
+[0;30;41m[ERROR  ][0m :     line 158 [1010] [GetAtt validation of parameters] Invalid GetAtt VPCStack.Outputs.VPCID for resource WorkloadStack
+[0;30;41m[ERROR  ][0m :     line 162 [1010] [GetAtt validation of parameters] Invalid GetAtt VPCStack.Outputs.VPCCIDR for resource WorkloadStack
+[0;30;41m[ERROR  ][0m : Lint failed with errors
